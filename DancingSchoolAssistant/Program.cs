@@ -9,5 +9,5 @@ IConfiguration config = new ConfigurationBuilder()
 var azureConfig = new AzureConfig();
 config.Bind(azureConfig);
 
-await WithAzureOpenAi.Run(azureConfig);
-// await WithSemanticKernel.Run(azureConfig);
+// await WithAzureOpenAi.Run(azureConfig);
+await WithSemanticKernel.Run(azureConfig);

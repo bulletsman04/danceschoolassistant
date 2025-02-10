@@ -29,7 +29,8 @@ public static class WithSemanticKernel
             .AddAzureOpenAIChatCompletion(
                 deploymentName: azureConfig.AzureOAIDeploymentName,
                 endpoint: azureConfig.AzureOAIEndpoint,
-                new DefaultAzureCredential())
+                new DefaultAzureCredential(),
+                apiVersion: "V2024_06_01")
             .Build();
 
         var chatCompletion = kernel.Services.GetRequiredService<IChatCompletionService>();
